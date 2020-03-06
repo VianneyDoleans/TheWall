@@ -1,27 +1,28 @@
-# TheWall
+# The Wall Website
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+This is the Wall Website. the purpose of the project is to make a [Pinterest](pinterest.com) like.  
+We want that users can add some pictures, commentaries and likes the content of the website.
 
-## Development server
+## Frameworks and Technologies
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+We are using Angular 2+ for this website
 
-## Code scaffolding
+## Website configuration
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Inside **src/env.json**, you have to change value of
+  `window.__env.API_URL = ''` with URL of your TheWall API
 
-## Build
+### How to run ?
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+For testing:
 
-## Running unit tests
+    npm run tsc && ng build --aot --watch
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+/!\ Check that your inotify is high to handle all your files ! /!\
+See the helper [here](https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers)
 
-## Running end-to-end tests
+For building:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+    ng build --serve
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Result in the /build folder.

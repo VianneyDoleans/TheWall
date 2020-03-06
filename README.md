@@ -1,18 +1,43 @@
-# webCAU
-## Web Project in CAU - The Wall
+# The-wall-korea
 
-This project is using fullstack JS technologies
+Link to this website : [The-Wall](https://the-wall-journey.herokuapp.com)
 
-### Front:
+This project is a picture gallery, like [Pinterest](https://www.pinterest.com).  
+You can publish pictures (tags, description, etc), add comments, like, search pictures by filers, consult profiles, do moderation stuffs etc.  
 
-In the folder front, you will find the all website project in Angular 2+. [Angular 2+](https://cli.angular.io/) is using [Typescript](https://www.typescriptlang.org/), and we are using some modules with angular like [Bootstrap module](https://ng-bootstrap.github.io/#/home) and [Material module](https://material.angular.io/).  
-See the README in this folder to check how to run the website.
+We've created this platform to publish our travel photos from South Korea (2018-2019, Chung-Ang University, Seoul, 10 months).  
+This project can be reused for another purpose.
+
+## Technology
+
+This project is using fullstack JS technologies :
+- [TypeScript](https://www.typescriptlang.org/)
+- [Angular](https://angular.io/)
+- [FeathersJS](https://feathersjs.com/)
+- [MongoDB](https://mongoosejs.com/)
+
+### Front
+
+In front folder, you will find website project in [Angular 2+](https://cli.angular.io/) using [Typescript](https://www.typescriptlang.org/), and we are using some modules like [Bootstrap module](https://ng-bootstrap.github.io/#/home) and [Material module](https://material.angular.io/).  
+See the README in this folder to check how to configure the website.
 
 ### Back
 
-In the folder api, you will find the all api project that the website need to work properly.  
-We are using the Framework [FeathersJS](https://feathersjs.com/) to create a powerful and realtime REST API.
+In api folder, you will find api project, necessary for the website to work properly.  
+We are using the Framework [FeathersJS](https://feathersjs.com/) to create a powerful and realtime REST API.  
+Pictures are stored on [Google Drive](https://www.google.com/drive/).  
+See the README in this folder to check how to configure API.
 
-### How to test all in the same time ?
+### How to test ?
 
-Pretty simple ! We put everything on [Heroku](https://www.heroku.com/home) that let us put some instance of the website and the api up to test.  Please try the [website]().
+Pretty simple !  
+You can go to our website [here]([The-Wall](https://the-wall-journey.herokuapp.com).  
+
+In case you want to deploy the platform, you can put everything on [Heroku](https://www.heroku.com/home), on 2 different instances (one for front and one for api), create a MongoDB on [mLab](https://mlab.com/), then configure api and front (see Readme files inside front and api folders). Heroku and mblab are free, you will also need a google drive account for pictures storage.
+
+### Contributors
+
+- [Valentin Montage](https://github.com/ValMont13)
+- [Vianney Doleans](https://github.com/VianneyDoleans)
+- [Clément Nancelle](https://github.com/Hardkaise)
+- [Philippe Antunes](https://github.com/Deartchix)
