@@ -31,7 +31,7 @@ See the README in this folder to check how to configure API.
 ### How to test ?
 
 Pretty simple !  
-You can go to our website [here]([The-Wall](https://the-wall-journey.herokuapp.com).  
+You can go to our website [here](https://the-wall-journey.herokuapp.com).  
 
 In case you want to deploy the platform, you can put everything on [Heroku](https://www.heroku.com/home), on 2 different instances (one for front and one for api), create a MongoDB on [mLab](https://mlab.com/), then configure api and front (see Readme files inside front and api folders). Heroku and mblab are free, you will also need a google drive account for pictures storage.
 
