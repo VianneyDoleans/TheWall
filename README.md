@@ -16,13 +16,5 @@ Inside **src/env.json**, you have to change value of
 
 For testing:
 
-    npm run tsc && ng build --aot --watch
+    npm i && npm start
 
-/!\ Check that your inotify is high to handle all your files ! /!\
-See the helper [here](https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers)
-
-For building:
-
-    ng build --serve
-
-Result in the /build folder.
