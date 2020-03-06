@@ -1,0 +1,131 @@
+<section id="user-options" class="fullheight layout layout-center">
+  <app-loading [isRunning]="!ready"></app-loading>
+  <div class="user-options-group" *ngIf="ready">
+    <div class="options-navbar layout-row">
+      <div class="nav" (click)="mode = 'User'" [class.bg-primary]="mode === 'User'">
+        <h3 class="nav-title">General Information</h3>
+      </div>
+      <div class="nav" (click)="changeMode('Admin')" [class.bg-primary]="mode === 'Admin'" *ngIf="isCurrentUser() && user.roles.includes('admin')">
+        <h3 class="nav-title">Admin Information</h3>
+      </div>
+    </div>
+    <div class="user-options-container" [ngSwitch]="mode">
+      <ng-container *ngSwitchCase="'User'">
+        <ng-container *ngIf="isCurrentUser()">
+          <div class="row">
+            <div class="col-4">
+              <div class="img-container">
+                <a href="#" (click)="changeImage($event, avatar)">
+                  <img [src]="userImage.uri" [class.dark]="userImageLoading"/>
+                  <app-loading [isRunning]="userImageLoading"></app-loading>
+                </a>
+                <input type="file" id="avatar" #avatar name="avatar"
+                       accept="image/*" data-type='image'
+                       (change)="saveImage($event)"
+                       style="font-size: 50px; width: 120px; opacity: 0; filter:alpha(opacity=0);  position: relative; top: -40px; left: -20px" />
+              </div>
+            </div>
+            <div class="col-8 user-info layout-column">
+              <div class="field form-group">
+                <label for="email">Email</label>
+                <input class="form-control" type="text" id="email" [(ngModel)]="user.email"/>
+              </div>
+              <div class="field layout layout-row layout-vertical-align">
+                <span class="labels-title">Roles</span>
+                <span class="labels-container">
+                <span class="label label-default" *ngIf="user.roles.includes('viewer')">
+                  Viewer
+                </span>
+                <span class="label label-primary" *ngIf="user.roles.includes('sender')">
+                  Sender
+                </span>
+                <span class="label label-success" *ngIf="user.roles.includes('admin')">
+                  Admin
+                </span>
+              </span>
+              </div>
+            </div>
+            <div class="container user-description">
+            <textarea class="form-control" placeholder="Your description" [(ngModel)]="user.about"
+                      onfocus='this.style.height = "";this.style.height = this.scrollHeight + 5 + "px"'
+                      oninput='this.style.height = "";this.style.height = this.scrollHeight + 5 + "px"'
+                      rows="3"></textarea>
+            </div>
+            <div class="container user-password-change">
+              <div class="field form-group">
+                <label for="password">Password</label>
+                <input class="form-control" type="password" id="password" [(ngModel)]="user.password"/>
+              </div>
+              <div class="field form-group">
+                <label for="confirmPassword">Confirm password</label>
+                <input class="form-control" type="password" id="confirmPassword" [(ngModel)]="confirmPassword"/>
+              </div>
+            </div>
+            <div class="message-container">
+              <ngb-alert type="danger" *ngIf="error">{{error}}</ngb-alert>
+              <ngb-alert type="info" *ngIf="success">{{success}}</ngb-alert>
+            </div>
+            <div class="buttons-container">
+              <button type="button" class="btn btn-primary" (click)="save()">Save your profile</button>
+              <button type="button" class="btn btn-primary" (click)="return()">Return</button>
+            </div>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="!isCurrentUser()">
+          <div class="row">
+            <div class="col-4">
+              <div class="img-container">
+                <img [src]="userImage.uri" [class.dark]="userImageLoading"/>
+              </div>
+            </div>
+            <div class="col-8 user-info layout-column">
+              <div class="field form-group">
+                <label for="email">Email</label>
+                <p>{{user.email}}</p>
+              </div>
+              <div class="field layout layout-row layout-vertical-align">
+                <span class="labels-title">Roles</span>
+                <span class="labels-container">
+                <span class="label label-default" *ngIf="user.roles.includes('viewer')">
+                  Viewer
+                </span>
+                <span class="label label-primary" *ngIf="user.roles.includes('sender')">
+                  Sender
+                </span>
+                <span class="label label-success" *ngIf="user.roles.includes('admin')">
+                  Admin
+                </span>
+              </span>
+              </div>
+            </div>
+            <div class="container user-description read-only">
+              <p>{{user.about || 'No description'}}</p>
+            </div>
+          </div>
+        </ng-container>
+      </ng-container>
+      <ng-container *ngSwitchCase="'Admin'">
+        <div class="users-container layout-row">
+          <div class="user-item" *ngFor="let u of usersList" (click)="changeUser(u)">
+            <div class="user-field user-email">{{u.email}}</div>
+            <div class="user-field user-about">{{u.about}}</div>
+            <div class="user-field user-roles">
+              <span class="label label-default" *ngIf="u.roles.includes('viewer')">
+                  Viewer
+                </span>
+              <span class="label label-primary" *ngIf="u.roles.includes('sender')">
+                  Sender
+                </span>
+              <span class="label label-success" *ngIf="u.roles.includes('admin')">
+                  Admin
+                </span>
+            </div>
+            <div class="user-item-actions layout-row layout-center">
+              <mat-icon class="action" (click)="removeUser(u._id)">delete</mat-icon>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</section>

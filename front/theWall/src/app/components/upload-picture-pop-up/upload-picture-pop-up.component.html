@@ -1,0 +1,22 @@
+<h2 mat-dialog-title>Upload</h2>
+<form id="Form-upload">
+<mat-dialog-content>
+  <div class="form-group">
+    <label>Name of Picture:</label>
+    <input type="text" name="fname" class="form-control" [(ngModel)]="name"/>
+    <label>Description:</label>
+    <textarea name="name" type="text" name="fabout" class="form-control" placeholder="Write here about your picture" [(ngModel)]="description"></textarea>
+    <input id="file" type="file" (change)="file = $event.target.files[0]"/>
+  </div>
+  <div *ngFor="let tag of tagsDisplay">
+    <label>{{tag.name}}</label>
+    <input type="checkbox" #check (click)="addRemoveTag(tag, check)">
+  </div>
+  <div>
+      <input type="text" name="fname" class="form-control" [(ngModel)]="newTag"/>
+      <button id="CreateTag" (click)="createTag()">Create tag</button>
+  </div>
+  <button id="SendPicture" (click)="upload()">Upload</button>
+  <button class="mat-raised-button" id="closeButton" (click)="onNoClick()">Close</button>
+</mat-dialog-content>
+</form>

@@ -1,0 +1,147 @@
+@import '../../scss/variables';
+
+.user-options-group {
+  position: relative;
+  background-color: #fafafa;
+  padding: 5%;
+  width: 60vw;
+  box-shadow: 0 0 3px 0 gray;
+  margin-top: 3rem;
+}
+
+.user-info {
+  align-self: center;
+}
+
+.container {
+  width: 100%;
+  margin: 1% 2%;
+}
+
+.user-description.read-only {
+  margin-top: 3%;
+  background-color: white;
+  padding: 3%;
+  border-radius: 10px;
+  box-shadow: 0 0 1px 0 gray;
+}
+
+.user-description p {
+  margin: 0;
+}
+
+.options-navbar {
+  position: absolute;
+  top: -3rem;
+  left: 0;
+  width: 100%;
+  background-color: #fafafa;
+  z-index: 1;
+  color: black;
+  box-shadow: 0 0 3px 0 gray;
+}
+
+.navbar h3 {
+  margin: 0;
+}
+
+.nav {
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: all 1s ease;
+}
+
+.nav.active {
+  color: white;
+  background-color: black;
+}
+
+.nav.bg-primary {
+  color: white;
+}
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  padding-bottom: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 3px 0 gray;
+}
+
+.img-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  transition: all 1s ease;
+}
+
+.img-container:hover img {
+  transform: scale(1.1) rotate(10deg)
+}
+
+.img-container a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.img-container app-loading {
+  position: absolute;
+  top: 17.5%;
+  left: 40%;
+}
+
+img.dark {
+  filter: brightness(30%);
+}
+
+.labels-container {
+}
+
+.labels-title {
+  margin-right: 2rem;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.message-container {
+  width: 100%;
+  margin: 0 4%;
+}
+
+.users-container {
+  flex-wrap: wrap;
+}
+
+.user-item {
+  position: relative;
+  overflow: hidden;
+  flex-basis: 45%;
+  max-width: 45%;
+  padding: 1%;
+  background-color: white;
+  margin: 1%;
+  box-shadow: 0 0 1px 0 gray;
+  cursor: pointer;
+}
+
+.user-item .user-field {
+  margin-bottom: 1rem;
+}
+
+.user-item .user-field:last-child {
+  margin-bottom: 0;
+}
+
+.user-item-actions {
+  position: absolute;
+  top: calc(50% - 1rem);
+  right: 1rem;
+}
