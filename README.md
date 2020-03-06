@@ -8,7 +8,7 @@ You can publish pictures (tags, description, etc), add comments, like, search pi
 We've created this platform to publish our travel photos from South Korea (2018-2019, Chung-Ang University, Seoul, 10 months).  
 This project can be reused for another purpose.
 
-## Technology
+## Technologies
 
 This project is using fullstack JS technologies :
 - [TypeScript](https://www.typescriptlang.org/)
