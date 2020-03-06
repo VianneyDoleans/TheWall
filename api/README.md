@@ -21,4 +21,4 @@ Google Drive is also used for pictures storage.
 
 For testing:
 
-    npm start
+    npm i && npm start

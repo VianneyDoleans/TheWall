@@ -1,9 +1,9 @@
-# The-wall-korea
+# TheWall
 
-Link to this website : [The-Wall](https://the-wall-journey.herokuapp.com)
+Link to this website : [TheWall](https://the-wall-journey.herokuapp.com)
 
 This project is a picture gallery, like [Pinterest](https://www.pinterest.com).  
-You can publish pictures (tags, description, etc), add comments, like, search pictures by filers, consult profiles, do moderation stuffs etc.  
+You can publish pictures (tags, description, etc), add comments, like, search pictures by filters, consult profiles, do moderation stuffs etc.  
 
 We've created this platform to publish our travel photos from South Korea (2018-2019, Chung-Ang University, Seoul, 10 months).  
 This project can be reused for another purpose.
