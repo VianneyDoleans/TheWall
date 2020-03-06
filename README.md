@@ -1,43 +1,28 @@
-# The-wall-korea
+# The Wall Website
 
-Link to this website : [The-Wall](https://the-wall-journey.herokuapp.com)
+This is the Wall Website. the purpose of the project is to make a [Pinterest](pinterest.com) like.  
+We want that users can add some pictures, commentaries and likes the content of the website.
 
-This project is a picture gallery, like [Pinterest](https://www.pinterest.com).  
-You can publish pictures (tags, description, etc), add comments, like, search pictures by filers, consult profiles, do moderation stuffs etc.  
+## Frameworks and Technologies
 
-We've created this platform to publish our travel photos from South Korea (2018-2019, Chung-Ang University, Seoul, 10 months).  
-This project can be reused for another purpose.
+We are using Angular 2+ for this website
 
-## Technology
+## Website configuration
 
-This project is using fullstack JS technologies :
-- [TypeScript](https://www.typescriptlang.org/)
-- [Angular](https://angular.io/)
-- [FeathersJS](https://feathersjs.com/)
-- [MongoDB](https://mongoosejs.com/)
+Inside **src/env.json**, you have to change value of
+  `window.__env.API_URL = ''` with URL of your TheWall API
 
-### Front
+### How to run ?
 
-In front folder, you will find website project in [Angular 2+](https://cli.angular.io/) using [Typescript](https://www.typescriptlang.org/), and we are using some modules like [Bootstrap module](https://ng-bootstrap.github.io/#/home) and [Material module](https://material.angular.io/).  
-See the README in this folder to check how to configure the website.
+For testing:
 
-### Back
+    npm run tsc && ng build --aot --watch
 
-In api folder, you will find api project, necessary for the website to work properly.  
-We are using the Framework [FeathersJS](https://feathersjs.com/) to create a powerful and realtime REST API.  
-Pictures are stored on [Google Drive](https://www.google.com/drive/).  
-See the README in this folder to check how to configure API.
+/!\ Check that your inotify is high to handle all your files ! /!\
+See the helper [here](https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers)
 
-### How to test ?
+For building:
 
-Pretty simple !  
-You can go to our website [here]([The-Wall](https://the-wall-journey.herokuapp.com).  
+    ng build --serve
 
-In case you want to deploy the platform, you can put everything on [Heroku](https://www.heroku.com/home), on 2 different instances (one for front and one for api), create a MongoDB on [mLab](https://mlab.com/), then configure api and front (see Readme files inside front and api folders). Heroku and mblab are free, you will also need a google drive account for pictures storage.
-
-### Contributors
-
-- [Valentin Montage](https://github.com/ValMont13)
-- [Vianney Doleans](https://github.com/VianneyDoleans)
-- [Clément Nancelle](https://github.com/Hardkaise)
-- [Philippe Antunes](https://github.com/Deartchix)
+Result in the /build folder.
