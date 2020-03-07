@@ -67,7 +67,7 @@ Available actions depend of your role(s)
 
 ## How to Use
 
-You can go to our website [here](https://the-wall-journey.herokuapp.com).  
+You can go to our website [here](https://the-wall-journey.herokuapp.com) (wait few seconds, server needs time to boot up after a long sleep).  
 
 In case you want to deploy the platform, you can put everything on [Heroku](https://www.heroku.com/home), on 2 different instances (one for front and one for api), create a MongoDB on [mLab](https://mlab.com/), then configure api and front (see [API](api/README.md) and [Front](front/README.md)).  
 Heroku and mLab are free, you will also need a [Google Drive](https://www.google.com/drive/) account for picture storage.
