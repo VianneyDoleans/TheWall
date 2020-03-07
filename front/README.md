@@ -1,11 +1,11 @@
-# The Wall Website
+# The Wall Website - Front
 
-This is the Wall Website. the purpose of the project is to make a [Pinterest](pinterest.com) like.  
-We want that users can add some pictures, commentaries and likes the content of the website.
+This is the Wall Website. the purpose of this project is to make a [Pinterest](pinterest.com) like.  
 
 ## Frameworks and Technologies
 
-We are using Angular 2+ for this website
+We are using [Angular 2+](https://cli.angular.io/) and [Typescript](https://www.typescriptlang.org/).  
+We're also using some modules like [Bootstrap module](https://ng-bootstrap.github.io/#/home) and [Material module](https://material.angular.io/).
 
 ## Website configuration
 
