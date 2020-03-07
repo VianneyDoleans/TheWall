@@ -26,7 +26,10 @@
   <a href="front/README.md">Front</a>
 </p>
 
-![screenshot](img/TheWall_scroll.gif)
+<p align="center">
+  <img src="img/TheWall_scroll.gif">
+</p>
+
 
 ## Presentation
 
