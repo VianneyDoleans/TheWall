@@ -1,9 +1,13 @@
 # The Wall API
 
-This is API of the Wall website. the purpose of the project is to make a [Pinterest](pinterest.com) like.  
-We want that users can add some pictures, commentaries and likes the content of the website.
+This is API of TheWall website. the purpose of this project is to make a [Pinterest](pinterest.com) like.  
 
-## API Configuration
+## Frameworks and Technologies
+
+We are using [FeathersJS](https://feathersjs.com/) and [Mongoose](https://mongoosejs.com/) (MongoDB) for this API.  
+[Google Drive](https://www.google.com/drive/) is also used for pictures storage.
+
+## API configuration
 
 Inside environment variables of your server/PC, you have to create and specify a value for :
 - googleClientId
@@ -11,11 +15,6 @@ Inside environment variables of your server/PC, you have to create and specify a
 - googleToken
 - MONGODB_URL
 - SECRET_AUTHENTICATION
-
-## Frameworks and Technologies
-
-We are using FeathersJS and Mongooose (MongoDB) for this API.  
-Google Drive is also used for pictures storage.
 
 ### How to run ?
 
